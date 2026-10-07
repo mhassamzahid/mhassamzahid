@@ -83,10 +83,6 @@ def build() -> str:
     w(f'<p>{pic("telemetry", "Live GitHub telemetry: contribution grid, streaks and languages, rebuilt daily.")}</p>\n')
 
     w(f'<p>{link(f"mailto:{P.EMAIL}", pic("footer", f"Let us build something that ships. {P.EMAIL}"))}</p>\n')
-    w('<p align="center"><sub>Every image on this page is a hand-built SVG drawn by '
-      '<a href="generator">a small Python renderer</a> with embedded font subsets, '
-      'animated with CSS and SMIL, and rebuilt daily by '
-      '<a href=".github/workflows/profile.yml">GitHub Actions</a>. No third-party widgets.</sub></p>')
     return "\n".join(out) + "\n"
 
 

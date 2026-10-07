@@ -6,7 +6,7 @@
 
 <p><a href="https://mhassamzahid.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg"><img alt="Hassam Zahid — AI Engineer. I turn scattered business tools into one AI-powered workflow." src="assets/hero-light.svg" width="100%"></picture></a></p>
 
-<p align="center"><a href="mailto:mhassam.dev@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-email-dark.svg"><img alt="Email me" src="assets/btn-email-light.svg"></picture></a>&nbsp;<a href="https://mhassamzahid.vercel.app/Hassam_Zahid_AI_Engineer_CV.pdf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-cv-dark.svg"><img alt="Download CV" src="assets/btn-cv-light.svg"></picture></a>&nbsp;<a href="https://mhassamzahid.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-site-dark.svg"><img alt="Portfolio" src="assets/btn-site-light.svg"></picture></a></p>
+<p align="center"><a href="mailto:mhassamzahid@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-email-dark.svg"><img alt="Email me" src="assets/btn-email-light.svg"></picture></a>&nbsp;<a href="https://mhassamzahid.vercel.app/Hassam_Zahid_AI_Engineer_CV.pdf"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-cv-dark.svg"><img alt="Download CV" src="assets/btn-cv-light.svg"></picture></a>&nbsp;<a href="https://mhassamzahid.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/btn-site-dark.svg"><img alt="Portfolio" src="assets/btn-site-light.svg"></picture></a></p>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/trace-dark.svg"><img alt="Agent trace: an LLM agent screens this profile with tool calls; every result is quoted from the CV." src="assets/trace-light.svg" width="100%"></picture></p>
 
@@ -19,7 +19,7 @@
 | **Core** | RAG · LLM agents · MCP · ElevenLabs voice agents · n8n · FastAPI · Next.js · AWS |
 | **Education** | BS Software Engineering, Usman Institute of Technology · 2022 – 2026 |
 | **Based** | Karachi, PK · UTC+5 |
-| **Reach me** | [mhassam.dev@gmail.com](mailto:mhassam.dev@gmail.com) · [CV (PDF)](https://mhassamzahid.vercel.app/Hassam_Zahid_AI_Engineer_CV.pdf) · [mhassamzahid.vercel.app](https://mhassamzahid.vercel.app) |
+| **Reach me** | [mhassamzahid@gmail.com](mailto:mhassamzahid@gmail.com) · [CV (PDF)](https://mhassamzahid.vercel.app/Hassam_Zahid_AI_Engineer_CV.pdf) · [mhassamzahid.vercel.app](https://mhassamzahid.vercel.app) |
 
 </div>
 
@@ -83,6 +83,5 @@
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/section-telemetry-dark.svg"><img alt="06 · Telemetry: Live from GitHub, rebuilt daily" src="assets/section-telemetry-light.svg" width="100%"></picture></p>
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/telemetry-dark.svg"><img alt="Live GitHub telemetry: contribution grid, streaks and languages, rebuilt daily." src="assets/telemetry-light.svg" width="100%"></picture></p>
 
-<p><a href="mailto:mhassam.dev@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"><img alt="Let us build something that ships. mhassam.dev@gmail.com" src="assets/footer-light.svg" width="100%"></picture></a></p>
+<p><a href="mailto:mhassamzahid@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg"><img alt="Let us build something that ships. mhassamzahid@gmail.com" src="assets/footer-light.svg" width="100%"></picture></a></p>
 
-<p align="center"><sub>Every image on this page is a hand-built SVG drawn by <a href="generator">a small Python renderer</a> with embedded font subsets, animated with CSS and SMIL, and rebuilt daily by <a href=".github/workflows/profile.yml">GitHub Actions</a>. No third-party widgets.</sub></p>
