@@ -1,0 +1,55 @@
+name: Rebuild profile
+
+on:
+  push:
+    paths:
+      - "generator/**"
+      - "fonts/**"
+      - ".github/workflows/profile.yml"
+  schedule:
+    - cron: "23 2 * * *" # daily, 07:23 in Karachi
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Only the default branch feeds the profile page.
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: generator/requirements.txt
+
+      - run: pip install -r generator/requirements.txt
+
+      - name: Fetch live GitHub numbers
+        env:
+          # Optional PROFILE_TOKEN (read:user) also counts private contributions.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python -m generator.fetch
+
+      - name: Render SVGs and README
+        run: python -m generator.build
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A assets data README.md
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore: rebuild profile ($(date -u +%Y-%m-%d))"
+            git push
+          fi
