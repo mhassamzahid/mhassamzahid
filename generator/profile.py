@@ -61,14 +61,15 @@ EXPERIENCE = [
 EDUCATION = {
     "degree": "BS Software Engineering",
     "school": "Usman Institute of Technology",
-    "period": "2022 – 2026",
+    "period": "2022 – Feb 2026",
     "fyp": "UIT University website: Next.js + Sanity.io CMS so staff publish without a developer",
 }
 
 # Career lanes for the timeline. Dates are month precision ("YYYY-MM"); end None = now.
 TIMELINE = [
     {"lane": "Degree", "title": "BS Software Engineering", "where": "Usman Institute of Technology",
-     "start": "2022-01", "end": "2026-12", "precision": "year"},
+     "start": "2022-01", "end": "2026-02", "precision": "year-start",
+     "end_label": "Graduated Feb 2026"},
     {"lane": "Final year project", "title": "UIT University website", "where": "Next.js + Sanity.io",
      "start": "2025-01", "end": "2025-12", "precision": "year"},
     {"lane": "Industry", "title": "Python Developer", "where": "Axioware Solutions",

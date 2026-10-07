@@ -17,7 +17,7 @@
 | **Looking for** | AI Engineer roles building LLM-powered products |
 | **Now** | Python Developer @ Axioware Solutions · Sep 2025 – present |
 | **Core** | RAG · LLM agents · MCP · ElevenLabs voice agents · n8n · FastAPI · Next.js · AWS |
-| **Education** | BS Software Engineering, Usman Institute of Technology · 2022 – 2026 |
+| **Education** | BS Software Engineering, Usman Institute of Technology · 2022 – Feb 2026 |
 | **Based** | Karachi, PK · UTC+5 |
 | **Reach me** | [mhassamzahid@gmail.com](mailto:mhassamzahid@gmail.com) · [CV (PDF)](https://mhassamzahid.vercel.app/Hassam_Zahid_AI_Engineer_CV.pdf) · [mhassamzahid.vercel.app](https://mhassamzahid.vercel.app) |
 
@@ -64,7 +64,7 @@
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg"><img alt="Skills as a periodic table: AI & Automation: LLMs, RAG, LLM agents, MCP, n8n, OpenAI API, Claude API, ElevenLabs, Prompt eng., pgvector; Backend: Python, FastAPI, Node.js, Express, REST APIs, JWT auth; Frontend: Next.js, React, TypeScript, Tailwind CSS, HTML/CSS; Cloud & Data: AWS, Linux, CI/CD, PostgreSQL, Redis, Supabase; Integrations: GoHighLevel, Salesforce, Meta Graph, Asana, Fathom, Maqsam, Google Docs" src="assets/stack-light.svg" width="100%"></picture></p>
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/section-path-dark.svg"><img alt="04 · Path: Where I've been, where I am" src="assets/section-path-light.svg" width="100%"></picture></p>
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg"><img alt="Career timeline: BS Software Engineering 2022–2026; final year project 2025; Python Developer at Axioware Solutions since Sep 2025." src="assets/timeline-light.svg" width="100%"></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/timeline-dark.svg"><img alt="Career timeline: BS Software Engineering 2022 – Feb 2026 (graduated); final year project 2025; Python Developer at Axioware Solutions since Sep 2025." src="assets/timeline-light.svg" width="100%"></picture></p>
 
 **Python Developer · Axioware Solutions** &nbsp;<sub>Karachi, Pakistan · Sep 2025 – Present</sub>
 
@@ -73,7 +73,7 @@
 - Integrated **GoHighLevel, Salesforce and the Meta Graph API with OpenAI and Claude** into unified data pipelines, maintaining **99.5% processing accuracy** across multiple enterprise accounts.
 - Shipped production **ElevenLabs voice agents** backed by FastAPI tool endpoints and an **MCP server**, deployed on AWS EC2 for live, real-time conversations.
 
-**BS Software Engineering · Usman Institute of Technology** &nbsp;<sub>2022 – 2026</sub>
+**BS Software Engineering · Usman Institute of Technology** &nbsp;<sub>2022 – Feb 2026</sub>
 
 - Final year project — UIT University website: Next.js + Sanity.io CMS so staff publish without a developer. [Live ↗](https://usamania-university.vercel.app)
 

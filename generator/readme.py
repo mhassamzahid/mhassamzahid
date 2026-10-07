@@ -67,7 +67,7 @@ def build() -> str:
     w(f'<p>{pic("stack", "Skills as a periodic table: " + "; ".join(g + ": " + ", ".join(n for _, n in items) for g, items in P.SKILL_GROUPS))}</p>\n')
 
     w(header("path"))
-    w(f'<p>{pic("timeline", "Career timeline: BS Software Engineering 2022–2026; final year project 2025; Python Developer at Axioware Solutions since Sep 2025.")}</p>\n')
+    w(f'<p>{pic("timeline", "Career timeline: BS Software Engineering 2022 – Feb 2026 (graduated); final year project 2025; Python Developer at Axioware Solutions since Sep 2025.")}</p>\n')
     for e in P.EXPERIENCE:
         w(f"**{e['role']} · {e['company']}** &nbsp;<sub>{e['location']} · {e['period']}</sub>\n")
         for h in e["highlights"]:

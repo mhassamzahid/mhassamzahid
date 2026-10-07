@@ -1,6 +1,6 @@
 """Career timeline: lanes for degree, final year project and industry.
 
-Year-precision lanes get soft ends; month-precision lanes get hard ends. The
+Year-precision edges are soft; month-precision edges are hard. The
 "now" line is the build date, so the current role grows every day the
 workflow runs.
 """
@@ -44,6 +44,7 @@ def build(t: dict) -> SVG:
         s.add(f'<path d="M{fmt(x)} {LANE_Y - 26}V{axis_y}" stroke="{t["line"]}"/>')
         s.add(label(s, x + 6, axis_y + 18, str(yr), size=10.5))
 
+    end_labels = []
     for i, lane in enumerate(P.TIMELINE):
         y = LANE_Y + i * LANE_H
         s.add(label(s, 28, y + 2, lane["lane"], size=10))
@@ -53,11 +54,13 @@ def build(t: dict) -> SVG:
         cur = lane.get("current")
         fill = t["signal"] if cur else t["ink4"]
         bh, by = 20, y - 2
-        if lane["precision"] == "year":
+        if lane["precision"] in ("year", "year-start"):
+            # Soft edge where only the year is known; hard edge where the month is.
+            end_op = 0 if lane["precision"] == "year" else 1
             gid = s.uid("soft")
             s.defn(f'<linearGradient id="{gid}" x1="0" x2="1"><stop offset="0" stop-color="{fill}" stop-opacity="0"/>'
                    f'<stop offset=".08" stop-color="{fill}"/><stop offset=".92" stop-color="{fill}"/>'
-                   f'<stop offset="1" stop-color="{fill}" stop-opacity="0"/></linearGradient>')
+                   f'<stop offset="1" stop-color="{fill}" stop-opacity="{end_op}"/></linearGradient>')
             fill = f"url(#{gid})"
         s.add(f'<rect x="{fmt(a)}" y="{by}" width="{fmt(b - a)}" height="{bh}" rx="{bh / 2 if not cur else 4}" '
               f'fill="{fill}" class="bar" style="animation-delay:{.2 + i * .2:.1f}s"/>')
@@ -67,6 +70,9 @@ def build(t: dict) -> SVG:
             s.add(s.text(a + 12, by + 14, inside, "mono", 10.5, ink))
         else:
             s.add(s.text(b + 10, by + 14, inside, "mono", 10.5, t["ink3"]))
+        if lane.get("end_label"):
+            s.add(f'<circle cx="{fmt(b - 10)}" cy="{by + 10}" r="3" fill="{t["ink"]}"/>')
+            end_labels.append((b + 10, by + 14, lane["end_label"]))
 
     # now line
     nx = sx(now)
@@ -76,4 +82,8 @@ def build(t: dict) -> SVG:
           f'<animate attributeName="r" values="4;12" dur="2s" repeatCount="indefinite"/>'
           f'<animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/></circle>')
     s.add(label(s, nx - 10, LANE_Y - 26, f"now · {today.strftime('%b %Y')}", t["accent"], size=10, anchor="end"))
+    for lx, ly, text in end_labels:
+        w = measure(text.upper(), "mono", 10, 0.06)
+        s.add(f'<rect x="{fmt(lx - 4)}" y="{ly - 12}" width="{fmt(w + 8)}" height="16" rx="3" fill="{t["bg"]}"/>')
+        s.add(label(s, lx, ly, text, t["ink2"], size=10))
     return s
