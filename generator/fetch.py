@@ -35,7 +35,7 @@ query($login: String!) {
       totalCount
       nodes {
         name stargazerCount pushedAt
-        languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } }
+        primaryLanguage { name }
       }
     }
   }
@@ -43,8 +43,6 @@ query($login: String!) {
 """
 
 LEVELS = {"NONE": 0, "FIRST_QUARTILE": 1, "SECOND_QUARTILE": 2, "THIRD_QUARTILE": 3, "FOURTH_QUARTILE": 4}
-# Markup and notebooks inflate byte counts without saying much about what was built.
-SKIP_LANGS = {"Jupyter Notebook", "HTML"}
 
 
 def main() -> int:
@@ -67,11 +65,13 @@ def main() -> int:
     cc = u["contributionsCollection"]
     days = [{"date": d["date"], "count": d["contributionCount"], "level": LEVELS[d["contributionLevel"]]}
             for w in cc["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
+    # Count repos by primary language. Byte counts get skewed by vendored code
+    # (a committed virtualenv turns a scraper into "Cython" and "C++").
     langs: dict[str, int] = {}
     for repo in u["repositories"]["nodes"]:
-        for e in repo["languages"]["edges"]:
-            if e["node"]["name"] not in SKIP_LANGS:
-                langs[e["node"]["name"]] = langs.get(e["node"]["name"], 0) + e["size"]
+        if repo["primaryLanguage"]:
+            name = repo["primaryLanguage"]["name"]
+            langs[name] = langs.get(name, 0) + 1
     data = {
         "synced": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
         "total": cc["contributionCalendar"]["totalContributions"],
@@ -80,7 +80,7 @@ def main() -> int:
         "private": cc["restrictedContributionsCount"],
         "repos": u["repositories"]["totalCount"],
         "stars": sum(r["stargazerCount"] for r in u["repositories"]["nodes"]),
-        "languages": sorted(({"name": k, "bytes": v} for k, v in langs.items()), key=lambda x: -x["bytes"]),
+        "languages": sorted(({"name": k, "repos": v} for k, v in langs.items()), key=lambda x: -x["repos"]),
         "days": days,
     }
     OUT.parent.mkdir(exist_ok=True)

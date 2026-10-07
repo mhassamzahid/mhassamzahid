@@ -126,12 +126,13 @@ def build(t: dict) -> SVG:
     # languages
     by = ly + 30
     langs = (d or {}).get("languages") or []
-    total = sum(x["bytes"] for x in langs) or 1
+    key = "repos" if langs and "repos" in langs[0] else "bytes"
+    total = sum(x[key] for x in langs) or 1
     top = langs[:5]
-    rest = total - sum(x["bytes"] for x in top)
-    segs = [(x["name"], x["bytes"]) for x in top] + ([("Other", rest)] if rest > 0 and langs else [])
+    rest = total - sum(x[key] for x in top)
+    segs = [(x["name"], x[key]) for x in top] + ([("Other", rest)] if rest > 0 and langs else [])
     bw = W - 2 * GX
-    s.add(label(s, GX, by, "languages · public repos, by bytes", size=10))
+    s.add(label(s, GX, by, "primary language · share of public repos", size=10))
     if segs:
         x = GX
         ramp = list(reversed(t["ramp"][1:])) + [t["ink4"], t["ink4"]]
