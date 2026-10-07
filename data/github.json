@@ -1,5 +1,5 @@
 {
- "synced": "2026-10-07T06:58Z",
+ "synced": "2026-10-07T06:59Z",
  "total": 360,
  "commits": 330,
  "prs": 13,
@@ -9,71 +9,35 @@
  "languages": [
   {
    "name": "Python",
-   "bytes": 16742944
+   "repos": 13
   },
   {
-   "name": "JavaScript",
-   "bytes": 2090608
+   "name": "HTML",
+   "repos": 6
   },
   {
    "name": "TypeScript",
-   "bytes": 977251
+   "repos": 4
   },
   {
    "name": "CSS",
-   "bytes": 713776
-  },
-  {
-   "name": "Cython",
-   "bytes": 402330
-  },
-  {
-   "name": "C++",
-   "bytes": 267840
-  },
-  {
-   "name": "C",
-   "bytes": 99697
+   "repos": 3
   },
   {
    "name": "PHP",
-   "bytes": 77031
+   "repos": 2
   },
   {
-   "name": "Shell",
-   "bytes": 37294
+   "name": "Jupyter Notebook",
+   "repos": 1
   },
   {
    "name": "Java",
-   "bytes": 28821
+   "repos": 1
   },
   {
-   "name": "PowerShell",
-   "bytes": 13686
-  },
-  {
-   "name": "Hack",
-   "bytes": 6817
-  },
-  {
-   "name": "PLpgSQL",
-   "bytes": 3128
-  },
-  {
-   "name": "Assembly",
-   "bytes": 3086
-  },
-  {
-   "name": "Dockerfile",
-   "bytes": 2027
-  },
-  {
-   "name": "Go Template",
-   "bytes": 356
-  },
-  {
-   "name": "RenderScript",
-   "bytes": 31
+   "name": "C",
+   "repos": 1
   }
  ],
  "days": [
