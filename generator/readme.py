@@ -43,6 +43,7 @@ def build() -> str:
     w(f"| **Core** | RAG · LLM agents · MCP · ElevenLabs voice agents · n8n · FastAPI · Next.js · AWS |")
     w(f"| **Education** | {P.EDUCATION['degree']}, {P.EDUCATION['school']} · {P.EDUCATION['period']} |")
     w(f"| **Based** | {P.LOCATION} · {P.UTC_OFFSET} |")
+    w(f"| **Writing** | [Notes from the build]({P.SITE}/notes): MCP tools for voice agents, retrieval in RAG products, n8n workflows |")
     w(f"| **Reach me** | [{P.EMAIL}](mailto:{P.EMAIL}) · [CV (PDF)]({P.CV_URL}) · [{P.SITE_LABEL}]({P.SITE}) |")
     w("\n</div>\n")
 

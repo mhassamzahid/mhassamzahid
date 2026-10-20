@@ -19,6 +19,7 @@
 | **Core** | RAG · LLM agents · MCP · ElevenLabs voice agents · n8n · FastAPI · Next.js · AWS |
 | **Education** | BS Software Engineering, Usman Institute of Technology · 2022 – Feb 2026 |
 | **Based** | Karachi, PK · UTC+5 |
+| **Writing** | [Notes from the build](https://mhassamzahid.vercel.app/notes): MCP tools for voice agents, retrieval in RAG products, n8n workflows |
 | **Reach me** | [mhassamzahid@gmail.com](mailto:mhassamzahid@gmail.com) · [CV (PDF)](https://mhassamzahid.vercel.app/Hassam_Zahid_AI_Engineer_CV.pdf) · [mhassamzahid.vercel.app](https://mhassamzahid.vercel.app) |
 
 </div>
